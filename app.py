@@ -133,7 +133,7 @@ if st.session_state.schema:
 
         st.download_button(
             label="Download as Markdown",
-            data=st.session_state.report,
+            data=st.session_state.report.encode("utf-8"),
             file_name="report.md",
             mime="text/markdown",
         )
